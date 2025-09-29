@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/basic_widgets/date_widget.dart';
+import 'package:hello_world/basic_widgets/fab_widget.dart';
+import 'package:hello_world/basic_widgets/image_widget.dart';
+import 'package:hello_world/basic_widgets/input_wigdet.dart';
+import 'package:hello_world/basic_widgets/loading_cupertiono.dart';
+import 'package:hello_world/basic_widgets/text_widget.dart';
+import 'package:hello_world/basic_widgets/scaffold_widget.dart';
+import 'package:hello_world/basic_widgets/dialog_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,28 +38,28 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'contoh date picker'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+//class MyHomePage extends StatefulWidget {
+//const MyHomePage({super.key, required this.title});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
+// This widget is the home page of your application. It is stateful, meaning
+// that it has a State object (defined below) that contains fields that affect
+// how it looks.
 
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+// This class is the configuration for the state. It holds the values (in this
+// case the title) provided by the parent (in this case the App widget) and
+// used by the build method of the State. Fields in a Widget subclass are
+// always marked "final".
 
-  final String title;
+//final String title;
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+// @override
+//State<MyHomePage> createState() => _MyHomePageState();
+//}
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
@@ -104,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('You have pushed the button Erwan Majid many times:'),
+            const FabWidget(),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
